@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WilliamPinto-Olmos/time-machine-js.git"
+    "url": "git+https://github.com/WilliamPinto-Olmos/time-machine-js-plugin-express.git"
   },
   "bugs": {
-    "url": "https://github.com/WilliamPinto-Olmos/time-machine-js/issues"
+    "url": "https://github.com/WilliamPinto-Olmos/time-machine-js-plugin-express/issues"
   },
-  "homepage": "https://github.com/WilliamPinto-Olmos/time-machine-js#readme",
+  "homepage": "https://github.com/WilliamPinto-Olmos/time-machine-js-plugin-express#readme",
   "files": [
     "dist",
     "README.md"
