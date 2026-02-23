@@ -1,3 +1,4 @@
+import { AsyncLocalStorage } from "async_hooks";
 import {
   travel,
   returnToPresent,
@@ -7,6 +8,10 @@ import {
   type TimeMachineMode,
 } from "time-machine-js";
 import type { Request, Response, NextFunction } from "express";
+
+export const timeMachineStore = new AsyncLocalStorage<{
+  targetTimestamp: number;
+}>();
 
 export interface TimeMachineMiddlewareOptions {
   /**
@@ -96,6 +101,8 @@ export function timeMachineMiddleware(
     res.on("finish", revertTime);
     res.on("close", revertTime);
 
-    next();
+    timeMachineStore.run({ targetTimestamp }, () => {
+      next();
+    });
   };
 }
