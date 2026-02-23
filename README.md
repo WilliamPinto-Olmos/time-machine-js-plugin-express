@@ -5,7 +5,7 @@ An Express.js middleware plugin for [`time-machine-js`](https://www.npmjs.com/pa
 ## Installation
 
 ```bash
-npm install time-machine-js-plugin-express time-machine-js
+npm install time-machine-js-plugin-express
 ```
 
 ## Usage
